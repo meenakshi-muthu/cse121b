@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="weather.css">
+  <title>Weather Forecast App</title>
+</head>
+<body>
+  <div class="container">
+    <label for="location">Enter city or coordinates:</label>
+    <input type="text" id="location" placeholder="E.g., New York">
+    <button id="weather-button">Get Weather</button>
+    <div id="weather-info"></div>
+  </div>
+  <!-- The below can be used when we are unable to install axios on our system -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+
+  <script type="module" src="weather.js"></script>
+
+</body>
+</html>
