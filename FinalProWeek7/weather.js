@@ -1,7 +1,7 @@
 // Import the Axios library as a module
+// import axios from 'axios';
 // We can use either import or use the script in the html
 
-// import axios from 'axios';
 
 // Define the getWeather function
 async function getWeather() {
@@ -45,6 +45,10 @@ async function getWeather() {
     const cities = [];
     cities.push(cityName);
     console.log("Temperature:", temperature);
+
+	const formattedCities = cities.map(city => `City: ${city}`);
+    console.log(formattedCities);
+	
     // Use of conditional branching
     if (temperature > 25) {
       console.log("It's a warm day!");
@@ -64,4 +68,4 @@ async function getWeather() {
 // Attach the event listener to the button
 document.getElementById('weather-button').addEventListener('click', getWeather);
 
-  
+
