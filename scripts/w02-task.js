@@ -13,6 +13,12 @@ const currentYear = new Date().getFullYear();
 // Step 2: Declare and instantiate a variable to hold the file path (location) and file name of the image.
 const profilePicture = "images/placeholder.png";
 
+// Step 2: Declare and instantiate an array to hold favorite foods.
+const favoriteFoods = ["Chicken Fry", "Dosa", "Burger", "Momos"];
+
+// Display the array before adding anything.
+console.log("Favorite Foods (Before Adding):", favoriteFoods);
+
 /* Step 3 - Element Variables */
 
 // Step 3: Use the document.getElementById() method to get the HTML element with the id of "name".
@@ -44,12 +50,35 @@ imageElement.setAttribute("alt", `Profile image of ${fullName}`);
 
 /* Step 5 - Array */
 
-const favoriteFoods = ["Chicken Fry", "Dosa", "Burger", "Momos"];
+// Step 5: Declare and instantiate a variable to hold a new favorite food.
 const newFavoriteFood = "Spring potato";
-favoriteFoods.push(newFavoriteFood);
-const anotherNewFavoriteFood = "Sushi";
-favoriteFoods.push(anotherNewFavoriteFood);
-favoriteFoods.shift();
-favoriteFoods.pop();
-foodElement.innerHTML = favoriteFoods.map(food => `<br>${food}`).join("");
 
+// Add the new favorite food to the array.
+favoriteFoods.push(newFavoriteFood);
+
+// Display the array after adding the new favorite food.
+console.log("Favorite Foods (After Adding One):", favoriteFoods);
+
+// Step 5: Declare and instantiate a variable to hold another new favorite food.
+const anotherNewFavoriteFood = "Sushi";
+
+// Add another new favorite food to the array.
+favoriteFoods.push(anotherNewFavoriteFood);
+
+// Display the array after adding another new favorite food.
+console.log("Favorite Foods (After Adding Two More):", favoriteFoods);
+
+// Remove the first item from the array.
+favoriteFoods.shift();
+
+// Display the array after removing the first item.
+console.log("Favorite Foods (After Removing the First Item):", favoriteFoods);
+
+// Remove the last item from the array.
+favoriteFoods.pop();
+
+// Display the array after removing the last item.
+console.log("Favorite Foods (After Removing the Last Item):", favoriteFoods);
+
+// Display the array in the HTML element.
+foodElement.innerHTML = favoriteFoods.map(food => `<br>${food}`).join("");

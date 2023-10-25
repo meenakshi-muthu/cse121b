@@ -1,7 +1,12 @@
 // Import the Axios library as a module
 // import axios from 'axios';
-// We can use either import or use the script in the html
+// We can use either import or use the script in the html.
 
+// Export the isWarm function
+export function isWarm(city, temperature) {
+	// You can define your own condition to determine if a city is warm or not
+	return temperature > 25;
+  }
 
 // Define the getWeather function
 async function getWeather() {
