@@ -48,10 +48,10 @@ const sortBy = (temples) => {
 
   switch (filter) {
     case 'utah':
-      displayTemples(temples.filter(temple => temple.location.includes('Utah')));
+      displayTemples(temples.filter(temple => temple.location.toLowerCase().includes('utah')));
       break;
-    case 'nonutah':
-      displayTemples(temples.filter(temple => !temple.location.includes('Utah')));
+    case 'notutah':
+      displayTemples(temples.filter(temple => !temple.location.toLowerCase().includes('utah')));
       break;
     case 'older':
       displayTemples(temples.filter(temple => new Date(temple.dedicated) < new Date(1950, 0, 1)));
